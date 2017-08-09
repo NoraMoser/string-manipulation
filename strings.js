@@ -1,28 +1,35 @@
 console.log("hi");
 
-let input = document.getElementById("inputArea").value;
+let input = document.getElementById("inputArea");
 let output = document.getElementById("outputArea");
 let button = document.getElementById("button");
 var testString = "";
-let newArray = [];
 
 
-button.addEventListener("click", function() {
+function inputAsString() {
+	testString = input.value;
 	
-reversal(testString);
-
-console.log(testString);
-// alphabits(testString);
-// palindrome(testString);
-})
-output.innerHTML = testString;
-
-
+}
 
 
 function reversal() {
-  return input.split("").reverse().join("");
+  	testString = testString.split("").reverse("").join("");
+  	return testString;
 }
+
+button.addEventListener("click", function() {
+	
+inputAsString();
+reversal();
+
+output.innerHTML = testString;
+
+})
+
+
+
+
+
 
 
 
