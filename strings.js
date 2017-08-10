@@ -9,7 +9,7 @@ let button = document.getElementById("button");
 var testString = "";
 let sentence = "";
 
-var charsToRemove = [/\0/g, /\1/g, /\2/g, /\3/g, /\4/g, /\5/g, /\6/g, /\7/g, /\8/g, /\9/g];
+var charsToRemove = [/0/g, /1/g, /2/g, /3/g, /4/g, /5/g, /6/g, /7/g, /8/g, /9/g];
 
 
 // for (var i = 0; i < charsToRemove.length; i++) {
@@ -47,8 +47,10 @@ function palindrome() {
 button.addEventListener("click", function() {
 
 for (var i = 0; i < charsToRemove.length; i++) {
+	console.log(charsToRemove[i]);
 	// var removeCharacters = charsToRemove[i];
 	input.value = input.value.replace(charsToRemove[i], "");
+console.log(charsToRemove[i]);
 }
 	
 	inputAsString();
